@@ -8,7 +8,7 @@ class Inferencer(Thread):
     def __init__(self):
         super().__init__()
         # Load the YOLO model
-        self.model = YOLO('helix_yolo.py')  # Path to your optimized ONNX model
+        self.model = YOLO('/home/helix/Desktop/helix_yolo.py')  # Path to your optimized ONNX model
         self.camera = cv2.VideoCapture('/dev/video0')
         # Set up RTP stream using FFmpeg
         self.ffmpeg_cmd = [
